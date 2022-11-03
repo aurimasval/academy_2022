@@ -61,5 +61,5 @@ Funkcija grąžina: 'some_text'
 /** PAPILDOMAI */
 
 /*
-7. Paverskite funkciją 'stringModifier', į lambda(arrow) funkciją.
+7. Paverskite funkciją 'stringEnhancer', į lambda(arrow) funkciją.
 */
