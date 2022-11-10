@@ -154,8 +154,11 @@ function extraExercise1(string $stringToSplit, array $delimiters): array
     ['Hello', 'how', 'are', 'you', 'doing?']
     */
 
-    return [];
+    return explode(";", str_replace($delimiters, ";", $stringToSplit));
 }
+
+echo PHP_EOL . 'EXTRA 1 uzduoptis' . PHP_EOL;
+var_export(extraExercise1('Hello_how_are-you doing?', [' ', '-', '_']));
 
 function extraExercise2(array $words): array
 {
@@ -171,8 +174,17 @@ function extraExercise2(array $words): array
     ]
     */
 
-    return [];
+    $categories = [];
+
+    foreach ($words as $word) {
+        $firstLetter = substr(strtolower($word), 0, 1);
+        $categories[$firstLetter][] = $word;
+    }
+
+    return $categories;
 }
+echo PHP_EOL . 'EXTRA 2 uzduoptis' . PHP_EOL;
+var_export(extraExercise2(['hello', 'Hickup', '123', 'computer']));
 
 function extraExercise3(array $words): array
 {
@@ -198,9 +210,21 @@ function extraExercise3(array $words): array
         ]
     ]
     */
+    return array_map(function ($item) {
+        $vowels = strlen($item) - strlen(str_replace(['a', 'e', 'i', 'o', 'u', 'y'], "", strtolower($item)));
 
-    return [];
+        return [
+            'vowels' => $vowels,
+            'consonants' => strlen($item) - $vowels,
+            'length' => strlen($item),
+            'starts_with' => substr($item, 0, 1),
+            'ends_with' => substr($item, -1, 1),
+        ];
+    }, $words);
 }
+
+echo PHP_EOL . 'EXTRA 3 uzduotis' . PHP_EOL;
+var_export(extraExercise3(['hello', 'you']));
 
 function extraExercise4(): array
 {
@@ -216,5 +240,14 @@ function extraExercise4(): array
         'real@gmail.com',
     ];
 
-    return [];
+    return array_filter($emails, function ($item) {
+        $symbols = ['a', 's', 'b', 'o'];
+        $firstLetter = substr($item, 0, 1);
+        $lastLetter = substr($item, -1, 1);
+
+        return in_array($firstLetter, $symbols) || in_array($lastLetter, $symbols);
+    });
 }
+
+echo PHP_EOL . 'EXTRA 4 uzduotis' . PHP_EOL;
+var_export(extraExercise4());
