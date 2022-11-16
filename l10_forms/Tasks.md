@@ -1,6 +1,6 @@
 1. Sukurkite programą kuri išvestu šachmatų lentą (HTML)
 
-2. Suformuokite lentele(HTML) 10 x 10 , kurioje butu atvaizduota susikertančių skaičių daugyba:
+2. Suformuokite lentele(HTML) 10 x 10 , kurioje butu atvaizduota susikertančių skaičių dalyba:
 
 
 0	| 1	    | 2	    | 3	    | 4	    | 5	    | 6	    | 7	    | 8
