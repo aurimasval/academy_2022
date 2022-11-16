@@ -29,7 +29,7 @@
                 if ($i % 2 === 0 && $j % 2 === 0 || $j % 2 !== 0 && $i % 2 !== 0) {
                     $displayClass = "even";
                 } ?>
-                <td style="collum <?= $displayClass; ?>"></td>
+                <td class="collumn <?= $displayClass; ?>"></td>
             <?php } ?>
         </tr>
     <?php } ?>
