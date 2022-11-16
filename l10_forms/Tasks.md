@@ -13,7 +13,7 @@
 7	| 7.000	| 3.500	| 2.333	| 1.750	| 1.400	| 1.167	| 1.000	| 0.875
 8	| 8.000	| 4.000	| 2.667	| 2.000	| 1.600	| 1.333	| 1.143	| 1.000
  
-2.1. Papildykite užduoti lentelės dydžio įvedimo parametrais:
+2.1. Papildykite užduoti lentelės dydžio įvedimo parametrais naudoti HTML formą:
 - ilgis
 - plotis
 
