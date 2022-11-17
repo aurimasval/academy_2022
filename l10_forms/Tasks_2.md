@@ -7,3 +7,9 @@
    3.1. Parašykite funkcionalumą, kuomet TODO įrašas saugomas sesijoje
    3.2. Parašykite funkcionalumą, kuomet TODO įrašas saugomas cookies
    3.3. Parašykite funkcionalumą, kuomet TODO įrašas saugomas file
+
+Papildomai
+
+4. Papildykite forma lauku due_date ir išveskite due dayte formatu : 25-01-1999
+
+5. Pridėkite pašalinimo galimybę todo itemui.
