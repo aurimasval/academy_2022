@@ -160,7 +160,11 @@ for ($i = 1; $i < 20; $i++) {
     }
 
     if ($i % 3 === 0) {
-        $result .= "Hey";
+        $result .= "HEY 3";
+    }
+
+    if ($i % 4 === 0) {
+        $result .= "ttttest";
     }
 
     if ($i % 5 === 0) {
