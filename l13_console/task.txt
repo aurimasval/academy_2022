@@ -1,0 +1,47 @@
+1. Parašykite programą kuri per scripto argumentus priimtų įvestą datą ir išvestų suformuotą datą formatu: 01-31-2022 13:13:13
+
+2. Parašykite programą kuri priimtų iš interaktyvaus terminalo 2 skaičius, ir suskaičiuotų nurodytų skaičių sumą.
+
+3. Papildykite 2 programą. Padarykite taip kad būtų galima priimti daugiau negu du skaičius ir būtų suskaičiuota pridėtų skaičių suma.
+
+Pvz.:
+Įveskite masyvo elementus 5 6 7 8 999 99
+
+Suma: 1124
+
+4. Parašykitę programą kuri leistų suskaičiuoti KMI(Kūno masės indeksą). KMI = svoris (kg) / (ūgis/100)^2 (m)
+- Progrmos vienas laukas turi priimti ūgį
+- programos kitas laukas turi priimti svorį
+Programa turi išvesti suapavalintą reikšmę iki 2 simbolių.
+
+Pvz.:
+ Ūgis: 180
+ Svoris: 80
+
+ KMI: 24,69
+
+5. Išplėskite 4. programą ir pridėkite įvedamų duomenų tikrinimą. Jeigu įvestas ne numeris, išveskite klaidos pranešimą ir nutraukite programos vykdymą.
+
+6. Praplėskite 5 programą. Leiskite vartotojui pasitaisyti ir vestį numerį dar kartą. Po 5 neteisingų bandymų nutraukite programos vykdymą
+
+PVZ.:
+
+php index.php
+Įveskite numerį: asdfa
+ivestas blogas numeris. Liko bandymų: 5
+Įveskite numerį: asdf
+ivestas blogas numeris. Liko bandymų: 4
+Įveskite numerį: asdf
+ivestas blogas numeris. Liko bandymų: 3
+Įveskite numerį: asdf
+ivestas blogas numeris. Liko bandymų: 2
+Įveskite numerį: adsf
+ivestas blogas numeris. Liko bandymų: 1
+Įveskite numerį: asdf
+Tu gal skaiciu nepažįsti?
+
+7. Parašykite programą, kuri leistų įvesti vartotojo informaciją į failą.
+Console turi priimti informaciją:
+vardas, pavardė, adresas
+
+Ir pridėjus turi išspausdinti failą į kurį dedame informacija.
