@@ -7,10 +7,12 @@
 1. Parašykite funkciją 'dividesBy5', kuri priimtų int tipo skaičių ir grąžintų jo dalybos iš 5 liekaną.
 */
 
-function test(int $param) {
-    echo "LABAS";
+function dividesBy5(int $number): int
+{
+    return $number % 5;
 }
 
+var_dump(dividesBy5(6));
 
 /*
 2. Parašykite funkciją 'arrayPrinter', kuri priimtų array tipo parametrą ir
@@ -22,7 +24,14 @@ Funkcija grąžina: funkcija nieko negrąžina - ji tik išspausdina masyvą į 
 ...
 */
 
+function arrayPrinter(array $array): void
+{
+    foreach ($array as $item) {
+        echo $item . PHP_EOL;
+    }
+}
 
+arrayPrinter(['some text', 'another text']);
 
 /*
 3. Parašykite funkciją 'stringEnhancer', kuri grąžintų pakeistą tekstą.
@@ -32,6 +41,16 @@ Funkcijos kvietimas: stringEnhancer('some text')
 Funkcija grąžina: '**some text**'
 */
 
+$string = "DEBESELIS";
+
+function stringEnhancer(string $pradinis, string $additional): string
+{
+    return $additional . " " . $pradinis . " " . $additional;
+}
+
+$result = stringEnhancer($string, "??");
+
+var_dump($result);
 
 /*
 4. Parašykite funkciją 'stringModifier', kuri pamodifikuotų paduotą string tipo kintamąjį.
@@ -42,7 +61,9 @@ echo $x; // '##some text##'
 Funkcija grąžina: funkcija nieko negrąžina
 */
 
+$string = fn($a, $delimeter = "*") => $delimeter . " " . $a . " " . $delimeter;
 
+echo $string('kebabas'). PHP_EOL;
 /*
 5. Parašykite funkciją 'textReplicator', kuri grąžintų 'padaugintą' tekstą.
 Funkcijos kvietimas:
@@ -63,3 +84,7 @@ Funkcija grąžina: 'some_text'
 /*
 7. Paverskite funkciją 'stringEnhancer', į lambda(arrow) funkciją.
 */
+
+$kintamasis = fn ($string, $additional = "##") => $additional . $string . $additional;
+
+echo $kintamasis(111);

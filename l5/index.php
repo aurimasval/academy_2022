@@ -2,6 +2,7 @@
 
 $functionInnerParameter = 6666;
 
+//simple function
 function calculate(int $parameter): int {
     global $functionInnerParameter;
     echo $functionInnerParameter . PHP_EOL;
@@ -17,15 +18,14 @@ $betKoksGlobalusParametras = 5;
 //echo calculate(6) . PHP_EOL;
 
 
+//function with default param and nullable
 
 function format(string $pirmas, ?string $antras, ?string $additional = "aaa") {
     echo $pirmas . " : " . $antras . " " . $additional . PHP_EOL;
 }
 
-//format("Pirmas", "Antras", ".");
-//format("Pirmas", "Antras");
-//format("Pirmas", null);
 
+//function with default param
 
 function format_wordpress($pirmas, $antras, $additional = "aaa")
 {
@@ -46,22 +46,20 @@ function format_wordpress($pirmas, $antras, $additional = "aaa")
     }
 }
 
+//function with params
 
-//format_wordpress("asfdasdf", "aa");
-
-
-
-
-function format2(string $pirmas, ?string $antras, ?string $additional = "aaa"): void {
-//    return null;
-echo "ISVEDAMAS TEKSTAS";
-//    return $pirmas . " : " . $antras . " " . $additional . PHP_EOL;
+function format2(
+    string $pirmas,
+    ?string $antras,
+    ?string $additional = "papildomas"
+): string {
+    return $pirmas . " : " . $antras . " " . $additional;
 }
 
-//format2("Pirma", "Antra", "Trecia");
+echo format2("Pirma", "Antra", "Trecia");
 
 
-
+//Pas by reference| pass by value
 $kriause = 88;
 $obuolys = 6;
 $vysnia = 88;
@@ -85,6 +83,7 @@ echo $obuolys . PHP_EOL;
 
 $papildomasPArametras = 10;
 
+//anonimine funkcija
 $functionKintamasis =
     function ($param) use ($papildomasPArametras, $obuolys, $vysnia) {
         return $param * 7 * $papildomasPArametras;
@@ -93,7 +92,7 @@ $functionKintamasis =
 echo $functionKintamasis(7) . PHP_EOL;
 echo $functionKintamasis(8) . PHP_EOL;
 echo $functionKintamasis(9) . PHP_EOL;
-
+//lamda funckija
 $fnKintamasis = fn($param) => $param * 7 * $papildomasPArametras;
 
 echo $fnKintamasis(7) . PHP_EOL;
