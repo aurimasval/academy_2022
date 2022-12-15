@@ -1,0 +1,28 @@
+--- uzduotis:
+
+Susikurkite naują failą.
+
+1. Sukurkite php scripta kuris išvestu informaciją lentelėje:
+
+producto vardas, categorijos vardas, kaina
+
+2. Papildykte html puslapį forma:
+
+Search by name : [_____]
+
+Filter by price range: from [___] to [____]
+
+Sort by: [____] Reiksmes: Nuo pigiausios; Nuo brangiausios; Pagal Pavadinimą ASC; Pagal Pavadinimą DESC;
+
+
+3. Įgyvendinkite paiešką ir rikiavimą su mysqli
+
+
+
+EXTRA:
+Pridėkite kategorijos filtrą:
+
+Filter by category: [_____]
+
+
+Kategorijos pasirinkime turi būti išvestos visos kategorijos kurios turi produktų.
