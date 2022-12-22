@@ -1,0 +1,99 @@
+
+
+1.
+Pakurti klasę Person su atributais:
+
+name
+
+lastName
+
+per construktoriu nurodyti parametrus name ir lastName
+
+
+
+papildykite klase Person attributu
+
+$jobPosition
+
+
+Nustatykite default $jobPosition="proggramer"
+
+Sukurkite 3 objektus.
+
+- Jonas jonaitis
+- Petras Petraits vadybininkas
+- John Doe manager
+
+
+2. Sukurkite funkcija getFullName, kuri grazintu sujungta varda ir pavarde
+getFullname turi isvesti varda ir pavardę didžiosiomis raidėmis.
+Pridekite methoda: presentMyself()
+
+kuris ispausdintu : 'Labas, mano vardas ' + fullName +  "Ir dirbu as kaip " job possition.
+
+
+pereikite per visus objektus ir iskvieskite visiems sia funkcija.
+
+3. Pridekite constant DEFAUL_ORIGIN_COUNTRY = lietuva.
+
+- pridekite papildoma construktoriaus paramatra origin_country.
+- jeigu person neturi gimtos salies nurodytos priskirktie jam lietuva.
+
+
+  pereikite per visus objektus ir iskvieskite visiems sia gimimo salies funkcija.
+
+
+
+4. Inheritance.
+
+Pakurkite klases:
+
+- Salesman
+ - phoneNumber
+- ComputerProgrammer
+  properciai
+ 	- OS:
+- WebDeveloper
+    - type: frontend|backend|fullStack
+
+Kurdami klases vadovaukitės šąryšiais:
+
+A Salesman "is a" Person
+A ComputerProgrammer "is a" Person
+A WebDeveloper "is a" Person
+A WebDeveloper "is a" ComputerProgrammer
+
+perrasykite Salesmen presentMyself funkciją papildomai spausdindami telefono numeri
+perrasykite WebDeveloper presentMysels funkciją papildomai spausdindami programuotojo tipa: backend| frontend| fullstack
+
+
+Sukurtkite 3 naujus objektus
+- Salesman Pardavejas Pardavejauskas tel Nr "11111"
+- WebDeveloper Programuotojas Programuotojauskas Linux backend
+- ComputerProgrammer Devopsas devopsauskas Linux
+
+Pereikite per visus darbuotojus ir ispausdinkite funkcija present myself.
+
+5 . Sukurkite Klase
+
+Department
+- string name
+- array employees
+- ?Datetime christmasPartyDate
+
+per construktoriu paduokite
+	- string name
+
+ir funkcija
++ addEmployees(array employees);
++ celebrateCristmasParty() //funkcija jeigu data yra siandiena isveda SVENCIAM, jeigu jau praejo "buvo smagu", jeigu dar bus "laukiam dovanu ir datos formatas" ir visuomet isveda visu darbuotuoju sarasa iskyrus jeigu darbuotojas yra programuotojas, nes programuotojai nesvencia.
+
+
+
+Pakurkite du naujus Departmento objektus.
+Department("Sales")
+Department("IT")
+
+Pridekite atitinkamus darbuotojus i departmentus. T.y. i sales department pridekite objektus kurie yra klases Salesman. I Departmanet IT pridekite objektus kurie yra ComputerProgrammer.
+ir isveskite kiekvieno departmento funkcija celebrateCristmasParty;
+
