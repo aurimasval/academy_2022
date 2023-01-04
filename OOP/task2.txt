@@ -47,16 +47,56 @@ EXTRA!!!!
 10. Sukurkite BackupStorage, kuris talpintu visuomet jusu faila, jeigu tai nėra temp failas.
 
 TRAIT:
-
-- sukurkite trait Timestapable, kuris tures private propercius createdAt ir updatedAt; bei getterius ir setterius
-- sukurkite klase Document, kuri naudotų Timestapable trait
-- sukurkite klase Invoice, kuri naudotų Timestapable trait
+1.
+- sukurkite trait TimestampableTrait, kuris turės private propercius createdAt ir updatedAt; bei getterius ir setterius: getUpdateAt, setUpdatedAt
+- sukurkite klase Document su properciu name, kuri naudotų TimestampableTrait trait
+- sukurkite klase Invoice su properciu name, kuri naudotų TimestampableTrait trait
 - sukurkite naujus objektus. ir iškvieskite seterius bei getterius.
 
+2.
+- Papildykite prieš tai buvusia programą
+- sukurkite trait DownloadTrait, Trait turi property $downloadUrl ir methodus getDownloadUrl setDownloadUrl, ir download funckiją, kuri vykdo file_get_contents($this->downloadUrl);
+- Pridėkite šitą trait prie Invoice klasės
+- Pridėkite invoice klasei downloadUrl per setDownloadUrl('https://s1.15min.lt/static/cache/NDcyeDI2OCw5NjR4NDM2LDEwNzE0Mzgsb3JpZ2luYWwsLGlkPTg3NDEyOTImZGF0ZT0yMDIzJTJGMDElMkYwNCwxODYzOTAzMjcz/untitled-1-63b5a208aefb3.jpg');
+- iškvieskite download methoda.
 
 STATIC:
+1.
+- sukurkite klase MoneyFormatter. kuri turi static methoda formatPrice. formatPrice methodas pridėtų " EUR" simbolį po kainos.
+- sukurtkite klase Product su properciai name ir price. Per construktoriu gaunami šitie properčiai
 
-- sukurkite klase MoneyFormatter. kuri turi static methoda formatPrice. formatPrice methodas prided "EUR" simbolį po kainos.
-- sukurtkite klase Product su properciai name ir price.
+- Sukurkite 3 productus ir išveskite jų visų pavadinimus ir kainas naudodami MoneyFormatter
 
-Sukurkite 3 productus ir išveskite jų visų pavadinimus ir kainas naudodami MoneyFormatter
+2.
+- Papildykite MoneyFormatter statiniu methodu formatPriceWithSymbol(string $price, string $currency)
+-> funkcija jeigu paduodama currency EUR isveda € kaina
+-> jeigu paduodama currency USD isveda $ kaina
+-> jeigu nėra tokios valiutos išveda tiesiog kaina
+
+Sukurkite 2 productus ir iškvieskite formatPriceWithSymbol jiems visiems su skirtingomis valiutomis: EUR, USD, LTL
+
+
+ABSTRACT:
+- sukurkite klase Book.
+	properciai:
+	 - content
+	 - pageCount
+	 - name
+ 	su getteriais
+- sukurkite abstract klase BookReader
+	su methodais:
+	- abstract displayCover(Book $book): void;
+	- abstract displayContent(Book $book): void;
+	- displayCount(Book $book) {
+		echo "Page count : " . $book->getContent();
+	}
+
+- sukurkite HtmlBookReadder class kuri extendins ir įgyvendins BookReader abstract methodus pavadinimui naudokite H1 tagus, contentui <p> tagus
+- sukurtkite ConsoleBookReader class kuri extendins ir įgyvendins BookReader abstract methodys pavadinui naudokite strt_touppr funkcija. o content isveskite paprastai
+
+
+- sukurkite klase Book
+- sukurkite HtmlBookReader
+- sukurkite ConsoleBookReader
+
+ivykdykite visus HtmlBookReader ir ConsoleBookReader methodus
