@@ -43,7 +43,8 @@ pridekite funkciją displayContent prie AbstractStorage klasės, kuri viska ir s
 
 iškvieskite displayContent funkciją vienam pasirinktam dokumentui.
 
-
+EXTRA!!!!
+10. Sukurkite BackupStorage, kuris talpintu visuomet jusu faila, jeigu tai nėra temp failas.
 
 TRAIT:
 
