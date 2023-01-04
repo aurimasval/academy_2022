@@ -1,0 +1,61 @@
+0. Sukurkite klase Document:
+- string $filename
+- string $content
+- string $type: "temp","secret","simple"
+
+1. Parašykite interface StorageInterface.
+- store(Document $document): void
+- getContent(string $filename): string
+
+2. Parašykite klasę FileSystemStorage kuri implementuoja StorageInterface
+- store funkicja saugo turiny file sistemoje galite naudoti
+- getContent gauna turinį iš file sistemos.
+
+3. Parašykite klasę HashedFileSystemStorage kuri extendina FileSystemStorage
+- store funkcija naudoja comandą base64_encode kad užhešuotų turinį saugomą failų sistemoje.
+- getContent gauna turinį iš file sistemos. base64_decode naudokite iššifravimui
+
+4. Parašykite klasę TempStorage kuri implementuoja StorageInterface
+- store funkcija pasaugo informaciją tiesiog array kintamajame.
+- getContent gauna turinį iš kintamajo.
+
+NEBŪTINAS 5 žingnis jeigu yra noro ir laiko:
+5. Parašykite klasę CookieStorage, kuri implementuoja StorageInterface
+ - store funkcija pasaugo informaciją teisiog cookie
+ - getContent gauna informacija iš cookie
+
+
+6. Sukurkite skirtingus storage tipus
+- sukurkite Documentus su skirtingais tipais ir pabandykite patalpinti juos naudodami atitinkamus storage tipus.
+
+
+7. Tam kad nereiktų spėlioti, kur kokiam storage viskas gyvena, Parašykite StorageContext clasę, kuri atliks funkcijas:
+  	- store(Document $document) //pagal documento tipa i atitinkama storage deda informaciją
+  	- getContentFromTheStorage(string $filename, string $documentType) //pagal documento tipa is atitinkamos storage traukia informacija
+!Pastaba pabandykite pagalvoti, kaip būtų galima eliminuoti if'us arba switch.
+
+8. Sukurkite StorageContext objektą.
+įvykdykite store funkciją su skirtingais Documentais.
+įvykdykite getContentFromTheStorage funkciją su skirtingais Documentais;
+
+9. Pakeiskite StorageInterface į abstrakcia klase AbstractStorage ir methodus pakeiskite į abstrakčius.
+pridekite funkciją displayContent prie AbstractStorage klasės, kuri viska ir spausdins.
+
+iškvieskite displayContent funkciją vienam pasirinktam dokumentui.
+
+
+
+TRAIT:
+
+- sukurkite trait Timestapable, kuris tures private propercius createdAt ir updatedAt; bei getterius ir setterius
+- sukurkite klase Document, kuri naudotų Timestapable trait
+- sukurkite klase Invoice, kuri naudotų Timestapable trait
+- sukurkite naujus objektus. ir iškvieskite seterius bei getterius.
+
+
+STATIC:
+
+- sukurkite klase MoneyFormatter. kuri turi static methoda formatPrice. formatPrice methodas prided "EUR" simbolį po kainos.
+- sukurtkite klase Product su properciai name ir price.
+
+Sukurkite 3 productus ir išveskite jų visų pavadinimus ir kainas naudodami MoneyFormatter
