@@ -1,6 +1,8 @@
 <?php
 
 include_once "Product.php";
+include_once "Trip.php";
+include_once "GiftCard.php";
 
 //Vykdomi shop'o veiksmai, objektu sukūrimas, veiksmai su objektais ir kažkokio outputo pateikimas
 //Product->name = "asdfasdfsadfsaasdfa
@@ -19,3 +21,16 @@ $product2 = new Product("Aguona", 67);
 $product2->setPrice(12);
 echo $product2->getName() . ' kainuoja: ' . $product2->getPrice() . ' EUR';
 var_dump($product1);
+
+//Pradedam naudot inheritance.
+
+$trip = new Trip("Kelione į Kiprą", 500);
+$trip->setDepartureDay(new DateTime());
+var_dump($trip);
+$trip->display();
+
+echo PHP_EOL;
+
+$giftCard1 = new GiftCard("Kuponas šventinis", 100);
+$giftCard1->setValidTill(new Datetime('2024-01-01'));
+var_dump($giftCard1);

@@ -1,12 +1,13 @@
 <?php
 
 class Product {
-    private string $name;
+    protected string $name;
     private float $price; //5.5
 
     //constructor
     public function __construct(string $nameFromConstructorParam, float $priceFromConstructorParam)
     {
+        echo "PRODUCTO CONSTRUKTORIUS";
         $this->name = $nameFromConstructorParam;
         $this->price = $priceFromConstructorParam;
     }
