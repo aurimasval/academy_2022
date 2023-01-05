@@ -1,6 +1,7 @@
 <?php
 
 include_once "Product.php";
+include_once "DiscountableInterface.php";
 include_once "Trip.php";
 include_once "GiftCard.php";
 include_once "CovidWater.php";
@@ -39,4 +40,20 @@ var_dump($giftCard1);
 $covidWater1 = new CovidWater("Dezinfekcinis skystis", 10);
 $covidWater1->setVolume(500);
 var_dump($covidWater1);
+//Atejo kaledos reikia nuolaidu;
+//var_dump($covidWater1->getPrice());
+//$covidWater1->applyDiscount();
+//var_dump($covidWater1->getPrice());
+//
+//var_dump($trip->getPrice());
+//$trip->applyDiscount();
+//var_dump($trip->getPrice());
+$cart = [$giftCard1, $trip, $covidWater1];
 
+foreach($cart as $item) {
+    var_dump($item->getPrice());
+    if ($item instanceof DiscountableInterface) {
+        $item->applyDiscount();
+    }
+    var_dump($item->getPrice());
+}
