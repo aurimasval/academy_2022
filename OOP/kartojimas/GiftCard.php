@@ -2,6 +2,7 @@
 
 class GiftCard extends Product
 {
+    use TimeTrait;
     private ?DateTime $validTill;
 
     //setters
@@ -13,5 +14,10 @@ class GiftCard extends Product
     public function getValidTill(): ?DateTime
     {
         return $this->validTill;
+    }
+
+    public function display(): void
+    {
+        echo "DOVANOSIM : " . $this->name;
     }
 }

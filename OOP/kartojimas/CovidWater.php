@@ -17,4 +17,9 @@ class CovidWater extends Product implements DiscountableInterface {
     {
         $this->price = $this->price - 1;
     }
+
+    public function display(): void
+    {
+        echo "DEZINFEKUOSIM SU " . $this->name;
+    }
 }

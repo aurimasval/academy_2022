@@ -1,6 +1,6 @@
 <?php
 
-class Product {
+abstract class Product {
     protected string $name;
     protected float $price; //5.5
 
@@ -32,5 +32,12 @@ class Product {
     public function getPrice(): float
     {
         return $this->price;
+    }
+
+    public abstract function display(): void;
+
+    public static function formatPrice($price): string
+    {
+        return $price . " EUR";
     }
 }

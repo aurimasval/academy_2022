@@ -1,5 +1,6 @@
 <?php
 
+include_once "TimeTrait.php";
 include_once "Product.php";
 include_once "DiscountableInterface.php";
 include_once "Trip.php";
@@ -8,21 +9,6 @@ include_once "CovidWater.php";
 
 //Vykdomi shop'o veiksmai, objektu sukūrimas, veiksmai su objektais ir kažkokio outputo pateikimas
 //Product->name = "asdfasdfsadfsaasdfa
-
-//Kuriam objekta product
-$product1 = new Product("TEST", 5);
-//Uždėjom pavadinimą:
-//$product1->setName("Kaštonas");
-//Pausdinam pavadinimą:
-var_dump($product1->getName());
-
-//Pakurti dar viena objekta:
-$product2 = new Product("Aguona", 67);
-//Uždėkim kaina ir uždėkim pavadinimą.
-//$product2->setName("Giles");
-$product2->setPrice(12);
-echo $product2->getName() . ' kainuoja: ' . $product2->getPrice() . ' EUR';
-var_dump($product1);
 
 //Pradedam naudot inheritance.
 
@@ -50,10 +36,18 @@ var_dump($covidWater1);
 //var_dump($trip->getPrice());
 $cart = [$giftCard1, $trip, $covidWater1];
 
+/** @var Product $item */
 foreach($cart as $item) {
+    $item->display();
     var_dump($item->getPrice());
     if ($item instanceof DiscountableInterface) {
         $item->applyDiscount();
     }
     var_dump($item->getPrice());
 }
+
+$trip->setCreatedAt(new DateTime('1912-12-12'));
+var_dump($trip->getCreatedAt());
+
+echo $giftCard1->getPrice() . PHP_EOL;
+echo Product::formatPrice($giftCard1->getPrice()) . PHP_EOL;

@@ -1,6 +1,8 @@
 <?php
 
 class Trip extends Product implements DiscountableInterface {
+    use TimeTrait;
+
     //Klaustukas priekyje reiškia kad gali būti null arba gali būti Datetime
     private ?DateTime $departureDay;
     //Klaustukas priekyje reiškia, kad gali būti null arba gali būti int
@@ -23,8 +25,7 @@ class Trip extends Product implements DiscountableInterface {
         $this->duration = $durationFromParam;
     }
 
-    public function display() {
-
+    public function display(): void {
         echo "KELIONE I : " . $this->name;
     }
 
