@@ -1,6 +1,6 @@
 <?php
 
-class Trip extends Product {
+class Trip extends Product implements DiscountableInterface {
     //Klaustukas priekyje reiškia kad gali būti null arba gali būti Datetime
     private ?DateTime $departureDay;
     //Klaustukas priekyje reiškia, kad gali būti null arba gali būti int
@@ -26,5 +26,12 @@ class Trip extends Product {
     public function display() {
 
         echo "KELIONE I : " . $this->name;
+    }
+
+    public function applyDiscount(): void
+    {
+        $newPrice = $this->price * 0.95;
+
+        $this->price = $newPrice;
     }
 }

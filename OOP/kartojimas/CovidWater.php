@@ -1,6 +1,6 @@
 <?php
 
-class CovidWater extends Product {
+class CovidWater extends Product implements DiscountableInterface {
     private ?int $volume;
 
     public function setVolume(int $volumeFromParam): void
@@ -11,5 +11,10 @@ class CovidWater extends Product {
     public function getVolume(): ?int
     {
         return $this->volume;
+    }
+
+    public function applyDiscount(): void
+    {
+        $this->price = $this->price - 1;
     }
 }
