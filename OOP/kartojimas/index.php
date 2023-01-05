@@ -3,6 +3,7 @@
 include_once "Product.php";
 include_once "Trip.php";
 include_once "GiftCard.php";
+include_once "CovidWater.php";
 
 //Vykdomi shop'o veiksmai, objektu sukūrimas, veiksmai su objektais ir kažkokio outputo pateikimas
 //Product->name = "asdfasdfsadfsaasdfa
@@ -34,3 +35,8 @@ echo PHP_EOL;
 $giftCard1 = new GiftCard("Kuponas šventinis", 100);
 $giftCard1->setValidTill(new Datetime('2024-01-01'));
 var_dump($giftCard1);
+
+$covidWater1 = new CovidWater("Dezinfekcinis skystis", 10);
+$covidWater1->setVolume(500);
+var_dump($covidWater1);
+
