@@ -5,6 +5,7 @@
 	- metodas widraw turi sumažinti money reikšme nurodyta suma ir grąžinti likutį.
 	- jeigu paduodamas didesnis skaičius, negu yra pinigų, metodas turi mesti paprasta Exception, su pranešimu, kad funkcija negali išimti tiek pinigų.
 	- Sukurkite klasės objektą ir iškvieskite funkcija su skirtingomis sumomis.
+	- vykdyam apgaukite try catch bloku. catch atveju išveskite klaidos pranešima ekrane.
 
 2. Papildykite prieš tai buvusį uždavinį.
 	- sukurkite Exception naują klasę NotEnoughBalanceException, kuri grąžintų prieš tai nurodytą pranešimą.
@@ -12,3 +13,4 @@
 	- papildykite vykdyma pridėdami ir finally statement'ą, kuris visuomet išvestų tekstą į ekraną: 'Buvo atlikta banko operacija'.
     - pridėkite metoda deposit, kuris taip pat tikrintu ar ivedamas ne neigiamas skaičius ir gebėtų išmesti klaidą. Deposit metodas prideda nurodyta suma prie money.
     - Pabandykite iškviesti deposit methodą su skirtingomis sumomis tarp ju ir neigiamu skaičiu.
+	- vykdyam apgaukite try catch bloku. catch atveju išveskite klaidos pranešima ekrane. ir įrašykite klaidą į failą.
