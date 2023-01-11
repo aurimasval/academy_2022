@@ -10,7 +10,7 @@
 2. Papildykite prieš tai buvusį uždavinį.
 	- sukurkite Exception naują klasę NotEnoughBalanceException, kuri grąžintų prieš tai nurodytą pranešimą.
 	- sukurkite Exception naują klasę NegativeAmountException, kuri grąžintų pranešimą "pinigų suma turi būti teigiamas skaičius"
-	- papildykite vykdyma pridėdami ir finally statement'ą, kuris visuomet išvestų tekstą į ekraną: 'Buvo atlikta banko operacija'.
-    - pridėkite metoda deposit, kuris taip pat tikrintu ar ivedamas ne neigiamas skaičius ir gebėtų išmesti klaidą. Deposit metodas prideda nurodyta suma prie money.
-    - Pabandykite iškviesti deposit methodą su skirtingomis sumomis tarp ju ir neigiamu skaičiu.
-	- vykdyam apgaukite try catch bloku. catch atveju išveskite klaidos pranešima ekrane. ir įrašykite klaidą į failą.
+  EXTRA	- papildykite vykdyma pridėdami ir finally statement'ą, kuris visuomet išvestų tekstą į ekraną: 'Buvo atlikta banko operacija'.
+  EXTRA - pridėkite metoda deposit, kuris taip pat tikrintu ar ivedamas ne neigiamas skaičius ir gebėtų išmesti klaidą. Deposit metodas prideda nurodyta suma prie money.
+  EXTRA - Pabandykite iškviesti deposit methodą su skirtingomis sumomis tarp ju ir neigiamu skaičiu.
+  EXTRA	- vykdyam apgaukite try catch bloku. catch atveju išveskite klaidos pranešima ekrane. ir įrašykite klaidą į failą.
