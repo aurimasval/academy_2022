@@ -6,7 +6,7 @@
  - Parašykite klasei contruktorių, kuris priimtų visus šiuos parametrus
  - Parašykite klasei __clone methodą, kuris resetintų state į "new"
  - parašykite __toString methodą, kuris išvestų teksta: Atliktas užsakymas {amount} kliento {email}. Jo būsena {state}.
- - Sukurtkite užsakymo kelis objektus. clonuokite juos. ir išspausdinkite tiesie kviesdami objekta
+ - Sukurtkite užsakymo kelis objektus. clonuokite juos. ir išspausdinkite tiesiai kviesdami objektą
  EXTRA - parašykite klase funkciją __serialize, kuri naudotų tik amount ir customerEmail
  EXTRA - Panaudokite funkciją serialize ir surašykite užsakymo informaciją į failą.
  EXTRA - Parašykite failo skaitymą, kuris sugebėtų pakurti objekta iš nuskaitytos informacijos iš failo naudodamas unserialize.
