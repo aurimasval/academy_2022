@@ -22,6 +22,6 @@ try {
 
 } catch (Throwable $exception) {
     file_put_contents("errors.log", "Ivyko klaida" . $exception->getMessage() . ' ' . $exception->getFile() . ' ' . $exception->getLine());
-
+    var_dump($exception->getTrace());
     echo "Gaudom sekancia klaida! " . $exception->getMessage();
 }
