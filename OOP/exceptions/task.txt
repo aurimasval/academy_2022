@@ -1,7 +1,7 @@
 1. Parašykite paprastą class BankAccount.
 	- kuri turi property money
 	- propertis money yra užsetinamas per construktorių
-	- klasė turi turėti methoda widraw(int $amount)
+	- klasė turi turėti methoda withdraw(int $amount)
 	- metodas widraw turi sumažinti money reikšme nurodyta suma ir grąžinti likutį.
 	- jeigu paduodamas didesnis skaičius, negu yra pinigų, metodas turi mesti paprasta Exception, su pranešimu, kad funkcija negali išimti tiek pinigų.
 	- Sukurkite klasės objektą ir iškvieskite funkcija su skirtingomis sumomis.
