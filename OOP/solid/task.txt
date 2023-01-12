@@ -1,0 +1,48 @@
+1. DIP:
+
+Sukurkite interface Printer su methodu print(), kuris priima eilutę ir grąžina void;
+- Sukurkite klasę TextPrinter, kuris implementuoja Printer sąsają ir turi metodą spausdinti(), kuris spausdina eilutę į konsolę.
+- Sukurkite klasę HtmlPrinter, kuris implementuoja Printer sąsają ir turi metodą spausdinti(), spausdinimo metu eilute apgaubiama <p> tagais.
+- Sukurkite klasę Document, kuri turi property Printer $printer ir $content. ir methoda printContent(), kuris kviečia printer->print() ir išprintina savo turimą turinį.
+- Sukurkite TextPrinter objekta ir HtmlPrinter objektą.
+- Sukurkite Document su turiniu ir priskirkite jam TextPrinter. pabandykite ispausdinti turini
+- Sukurtkite kita documentą su turiniu ir priskirkite jam HtmPrinter. pabandykite išpausindti turinį.
+
+2. SRP:
+
+Refactoring ticket:
+
+
+Turime klasę Užduotis:
+
+class Ticket {
+    private $id;
+    private $title;
+    private $description;
+    private $status;
+
+    public function __construct($id, $title, $description) {
+        $this->id = $id;
+        $this->title = $title;
+        $this->description = $description;
+        $this->status = 'open';
+    }
+
+    public function close() {
+        $this->status = 'closed';
+    }
+
+    public function saveToDatabase() {
+        // code to save the ticket to the database
+    }
+
+    public function sendEmailNotification() {
+        // code to send an email notification
+    }
+
+    public function logActivity() {
+        // code to log the activity
+    }
+}
+
+Vadovaudamiesi Single Responsibility Principu perrašykite nurodyta klasę.
