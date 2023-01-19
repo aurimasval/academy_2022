@@ -1,8 +1,8 @@
 1. DIP:
 
 Sukurkite interface Printer su methodu print(), kuris priima eilutę ir grąžina void;
-- Sukurkite klasę TextPrinter, kuris implementuoja Printer sąsają ir turi metodą spausdinti(), kuris spausdina eilutę į konsolę.
-- Sukurkite klasę HtmlPrinter, kuris implementuoja Printer sąsają ir turi metodą spausdinti(), spausdinimo metu eilute apgaubiama <p> tagais.
+- Sukurkite klasę TextPrinter, kuris implementuoja Printer sąsają ir turi metodą print(), kuris spausdina eilutę į konsolę.
+- Sukurkite klasę HtmlPrinter, kuris implementuoja Printer sąsają ir turi metodą print(), spausdinimo metu eilute apgaubiama <p> tagais.
 - Sukurkite klasę Document, kuri turi property Printer $printer ir $content. ir methoda printContent(), kuris kviečia printer->print() ir išprintina savo turimą turinį.
 - Sukurkite TextPrinter objekta ir HtmlPrinter objektą.
 - Sukurkite Document su turiniu ir priskirkite jam TextPrinter. pabandykite ispausdinti turini
